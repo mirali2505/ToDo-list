@@ -1,0 +1,67 @@
+.nav-light {
+  background-color: rgb(246, 227, 227);
+  color: rgb(40, 35, 35);
+}
+.nav-dark {
+  background-color: rgb(21, 20, 20);
+  color: rgb(230, 219, 219);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 0%;
+}
+.Home-light {
+  background-color: rgb(246, 227, 227);
+  color: rgb(40, 35, 35);
+}
+.Home-dark {
+  background-color: rgb(21, 20, 20);
+  color: rgb(209, 14, 14);
+}
+.box{
+  background-color: rgb(232, 232, 122);
+  color: black;
+  padding: 10%;
+}
+.icons{
+  padding: 30% 0% 0% 30%;
+  display: flex;
+  justify-content: space-around;
+}
+.main{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10%;
+  margin: 5%;
+}
+.todo-dark{
+  background-color: rgb(133, 126, 126);
+  color: rgb(230, 219, 219);
+  width: 70%;
+  margin: 5% auto 0% auto;
+ 
+}
+.todo-light{
+  background-color: rgb(134, 123, 123);
+  color: rgb(40, 35, 35);
+  width: 70%;
+  margin: 5% auto 0% auto;
+  
+}
+.allToDo-dark{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+   background-color: rgb(200, 218, 7);
+  color: rgb(24, 3, 3);
+  padding: 2%;
+}
+.allToDo-light{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2%;
+   background-color: rgb(75, 117, 216);
+  color: rgb(40, 35, 35);
+  padding: 2%;
+}
