@@ -3,10 +3,14 @@ import "./Home.css";
 import ModeContext from "../context/Mode_context";
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Register.css";
 export const Register = () => {
-const navigate = useNavigate();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name:"",
+    userName: "",
+    email: "",
+    password: "",
+    conPassword: "",
   });
 
   const [error, setError] = useState({});
@@ -21,7 +25,7 @@ const navigate = useNavigate();
     //   ...prev,
     //   [name]: value,
     // }))
-    setError({...error, [name] : ""})
+    setError({ ...error, [name]: "" });
     setError((prevError) => {
       const newError = { ...prevError };
       delete newError[name];
@@ -32,17 +36,13 @@ const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
-        console.log('if');
-        
-         localStorage.setItem("data", JSON.stringify(formData));
-    navigate("/Layout");
+      localStorage.setItem("registerData", JSON.stringify(formData))
+      console.log("done");
+      navigate("/");
     } else {
-        console.log("else");
-        
       alert("something went wrong!!");
       return;
     }
-   
   };
 
   const validate = () => {
@@ -66,38 +66,59 @@ const navigate = useNavigate();
   };
 
   return (
-    <div className={`${!isDarkMode ? "nav" : "nav-light"}`}>
-      <h1>Register</h1>
-      <form action="" onSubmit={handleSubmit}>
-        <label>User Name*</label>
-        <br />
-        <input type="text" name="userName" onChange={handleInputChange} />
-        {error.userName && <p>{error.userName}</p>}
-        <br />
-        <label>Email*</label>
-        <br />
-        <input type="email" name="email" onChange={handleInputChange} />
-        {error.email && <p>{error.email}</p>}
+  <div className={`${!isDarkMode ? "nav" : "nav-light"}`}>
 
-        <br />
-        <label htmlFor="">Password*</label>
-        <br />
-        <input type="password" name="password" onChange={handleInputChange} />
-        {error.password && <p>{error.password}</p>}
-        <br />
+    <div className="register-container">
+      <h1 className="title">REGISTER</h1>
+      <p className="subtitle">Create your account</p>
 
-        <label htmlFor="">Confim Password*</label>
-        <br />
+      <form onSubmit={handleSubmit} className="form-box">
+        
+        <label className="label">User Name:</label>
+        <input
+          type="text"
+          name="userName"
+          placeholder="Enter your name"
+          onChange={handleInputChange}
+          className="input-box"
+        />
+        {error.userName && <p className="error">{error.userName}</p>}
+
+        <label className="label">Email Address:</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="john@doe.com"
+          onChange={handleInputChange}
+          className="input-box"
+        />
+        {error.email && <p className="error">{error.email}</p>}
+
+        <label className="label">Password:</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Your Password"
+          onChange={handleInputChange}
+          className="input-box"
+        />
+        {error.password && <p className="error">{error.password}</p>}
+
+        <label className="label">Confirm Password:</label>
         <input
           type="password"
           name="conPassword"
+          placeholder="Confirm your password"
           onChange={handleInputChange}
+          className="input-box"
         />
-        {error.conPassword && <p>{error.conPassword}</p>}
-        <br />
-        <button type="submit">Register</button>
+        {error.conPassword && <p className="error">{error.conPassword}</p>}
+
+        <button type="submit" className="btn">Register</button>
       </form>
     </div>
-  
-  );
-}
+
+  </div>
+);
+
+};

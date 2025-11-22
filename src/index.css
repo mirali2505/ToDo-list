@@ -5,6 +5,8 @@
     text-decoration: none;
 }
 body{
-    background-color:rgb(71, 69, 69);
-    color: white;
+
+    font-family: "Poppins", sans-serif;
+    background-color: #413232;
+    color: #fff
 }

@@ -29,8 +29,9 @@ export const AllToDo = () => {
   if (error) return <h2>Error: {error}</h2>;
 
   return (
-    <div className={`${!isDarkMode ? "todo-dark" : "todo-light"}`}>
-      <h1 style={{ textAlign: "center", padding: "2%" }}>All ToDo</h1>
+    <div className={`${!isDarkMode ? "toDo-dark" : "toDo-light"}`}>
+      <h1  className="page-title">List of ToDos</h1>
+      <div className="page-title-line "></div>
 
       {posts.map((post) => (
         <div
@@ -38,8 +39,8 @@ export const AllToDo = () => {
           key={post.id}
         >
           <div>{post.todo}</div>
-          <div style={{ backgroundColor: post.completed ? "blue" : "red" }}>
-            {post.completed ? "done" : "pending"}
+          <div style={{ backgroundColor: post.completed ? "#ffde17" : "red" }} className="button">
+            {post.completed ? "completed" : "pending"}
           </div>
         </div>
       ))}

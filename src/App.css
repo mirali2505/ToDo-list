@@ -17,51 +17,124 @@ nav {
 }
 .Home-dark {
   background-color: rgb(21, 20, 20);
-  color: rgb(209, 14, 14);
+  color: rgb(230, 219, 219);
 }
-.box{
+.box {
   background-color: rgb(232, 232, 122);
   color: black;
   padding: 10%;
 }
-.icons{
+.icons {
   padding: 30% 0% 0% 30%;
   display: flex;
   justify-content: space-around;
 }
-.main{
+.main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10%;
-  margin: 5%;
+  /* margin: 5%; */
 }
-.todo-dark{
-  background-color: rgb(133, 126, 126);
-  color: rgb(230, 219, 219);
-  width: 70%;
-  margin: 5% auto 0% auto;
- 
+.page-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
 }
-.todo-light{
-  background-color: rgb(134, 123, 123);
-  color: rgb(40, 35, 35);
-  width: 70%;
-  margin: 5% auto 0% auto;
-  
+.toDo-dark {
+  background-color: rgb(45, 44, 44);
+  color: white;
+  padding-top: 30px;
 }
-.allToDo-dark{
+.toDo-light {
+  background-color: rgb(233, 231, 231);
+  color: rgb(16, 16, 16);
+  padding-top: 30px;
+}
+.allToDo-dark {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2%;
-   background-color: rgb(200, 218, 7);
-  color: rgb(24, 3, 3);
-  padding: 2%;
+  align-items: center;
+  background-color: rgb(12, 12, 12);
+  color: rgb(228, 221, 221);
+  padding: 15px 20px;
+  width: 75%;
+  margin: 5px auto 5px auto;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
 }
-.allToDo-light{
+.allToDo-light {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 2%;
-   background-color: rgb(75, 117, 216);
+  align-items: center;
+  background-color: rgb(252, 247, 247);
   color: rgb(40, 35, 35);
-  padding: 2%;
+  padding: 15px 20px;
+  width: 75%;
+  margin: 5px auto 5px auto;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
+}
+.button {
+  color: azure;
+  padding: 6px;
+  border: none;
+  border-radius: 10px;
+}
+.page-title-line {
+  width: 75%;
+  height: 3px;
+  background-color: #ffde17;
+  margin: auto;
+  border-radius: 10px;
+}
+.aboutToDo-dark {
+  background-color: rgb(45, 44, 44);
+  color: white;
+  width: 75%;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 30%;
+}
+.aboutToDo-light {
+  background-color: rgb(233, 231, 231);
+  color: rgb(16, 16, 16);
+  width: 75%;
+  margin: auto;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 30%;
+}
+.aboutToDo-dark p {
+  padding: 10px 0% 10px 0%;
+  line-height: 20px;
+}
+.aboutToDo-light p {
+  padding: 10px 0% 10px 0%;
+  line-height: 20px;
+}
+.btn-logout{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logout-button{
+
+  padding: 12px;
+  background: #d8093a;
+  color: white;
+  font-size: 18px;
+  border: solid;
+  border-radius: 10px;
+  cursor: pointer;
+  border-color: #d8093a;
+}
+.logout-button:hover {
+  background: #322b2d;
+  border-color: red;
+  color:red;
 }
