@@ -7,6 +7,7 @@ import ToDoDetail from "./ToDoDetail";
 import { Layout } from "./Layout";
 import { Login } from "./Login";
 import PrivateRouter from "./PrivateRouter";
+import Otp from "./Otp";
 
 export const router = createBrowserRouter([
   {
@@ -44,4 +45,9 @@ export const router = createBrowserRouter([
     path: "/register",
     element: <Register />,
   },
+
+  { 
+    path: "/otp", 
+    element: <Otp /> }
+    ,
 ]);

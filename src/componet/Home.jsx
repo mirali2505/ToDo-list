@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { Form } from "./Form";
 import Box from "./Box";
 
+
 const getLocalTasks = () => {
   let tasks = localStorage.getItem("data");
   return tasks ? JSON.parse(tasks) : [];
@@ -55,17 +56,15 @@ export const Home = () => {
 
   return (
     <div className={`${!isDarkMode ? "nav-dark" : "nav-light"}`}>
-      <Form
-        getFormData={getFormData}
-        formData={formData}
-        editId={editId}
-      />
+      <Form getFormData={getFormData} formData={formData} editId={editId} />
 
       <Box
         taskList={allData}
         editHandler={editHandler}
         deleteHandler={deleteHandler}
       />
+
+     
     </div>
   );
 };
