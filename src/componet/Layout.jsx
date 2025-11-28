@@ -29,7 +29,7 @@ export const Layout = () => {
         <div>
           {/* Nested route links */}
           <Link to="/">Home</Link> |<Link to="about">About</Link> |
-          <Link to="alltodo">All Todos</Link>
+          <Link to="alltodo">All Todos</Link>|<Link to="dashboard">Dashboard</Link>|
         </div>
 
         <div className="btn-logout">
